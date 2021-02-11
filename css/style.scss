@@ -1,0 +1,221 @@
+@charset  "UTF-8";
+
+
+ /*　共通部分　*/
+body {
+    font-size: 16px;
+    color: #333;
+    font-family: "ヒラギノ明朝 ProN", serif, Gothic ProN;
+    line-height: 1.6875;
+    text-align:center;
+    width:100%;
+}
+
+ul {
+    list-style: none;
+}
+li{
+    list-style: none;
+}
+
+img {
+    width: 100%;
+}
+h1{
+    font-size:40px;
+    margin-left: 20px;
+    font-weight: bold;
+}
+h2{
+    font-size:36px;
+}
+
+
+
+ /*　ヘッダー*/
+.header-left{
+    text-align:left;
+}
+
+
+
+ .hamburger {
+    display: block;
+    position: fixed;
+    z-index: 3;
+    right: 13px;
+    top: 12px;
+    width: 42px;
+    height: 42px;
+    cursor: pointer;
+    text-align: center;
+  }
+  .hamburger span {
+    display: block;
+    position: absolute;
+    width: 30px;
+    height: 2px;
+    left: 6px;
+    background: #555;
+    -webkit-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
+  }
+  .hamburger span:nth-child(1) {
+    top: 10px;
+  }
+  .hamburger span:nth-child(2) {
+    top: 20px;
+  }
+  .hamburger span:nth-child(3) {
+    top: 30px;
+  }
+  /* ナビ開いてる時のボタン(レスポンシブ) */
+  .hamburger.active span:nth-child(1) {
+    top: 16px;
+    left: 6px;
+    background: #fff;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+  .hamburger.active span:nth-child(2),
+  .hamburger.active span:nth-child(3) {
+    top: 16px;
+    background: #fff;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+  nav.globalMenuSp {
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.7);
+    text-align: center;
+    display: block;
+    width: 100%;
+    opacity: 0;
+    -webkit-transition: opacity .6s ease, visibility .6s ease;
+    transition: opacity .6s ease, visibility .6s ease;
+  }
+  nav.globalMenuSp ul {
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+  }
+  nav.globalMenuSp ul li {
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+    -webkit-transition: .4s all;
+    transition: .4s all;
+  }
+  nav.globalMenuSp ul li:last-child {
+    padding-bottom: 0;
+  }
+  nav.globalMenuSp ul li:hover {
+    background: #ddd;
+  }
+  nav.globalMenuSp ul li a {
+    display: block;
+    color: #fff;
+    padding: 1em 0;
+    text-decoration: none;
+  }
+  /* このクラスを、jQueryで付与・削除する */
+  nav.globalMenuSp.active {
+    opacity: 100;
+  }
+
+
+
+/*　pickup section*/
+.pickup-image{
+  display: flex;
+
+}
+
+.pickup-image-item{
+    img{
+      width:30%;
+    }
+}
+
+/*　feature section*/
+
+.card__items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-top: 56px;
+}
+
+.card__item {
+  width: calc(33.33333333% - 4px * 2 / 3);
+  margin-right: 4px;
+  margin-top: 24px;
+}
+
+.card__item:nth-child(3n) {
+  margin-right: 0;
+}
+.media {
+  overflow: hidden;
+  background: #fff;
+  border-radius: 4px;
+  padding: 16px 16px 14px;
+  display: block;
+  text-decoration: none;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+
+}
+
+.media__img {
+  text-align: center;
+}
+
+.media__img img {
+  vertical-align: bottom;
+}
+
+.media__body {
+  margin-top: 22px;
+  width:100%;
+  margin:auto;
+  text-align:left;
+  box-shadow: 0 15px 30px -5px rgba(0,0,0,.15), 0 0 5px rgba(0,0,0,.1);
+	transform: translateY(-4px);
+
+
+
+}
+.media__body p1{
+    text-align: center;
+}
+
+
+
+
+
+/*　contact section*/
+
+
+
+
+
+/*　footer section*/
+footer{
+   background-color: #121212;
+}
+
+.copyright{
+
+    p{
+        color:#fff;
+        padding:10px 0;
+    }
+}
+
